@@ -1,0 +1,36 @@
+name: 5 Machine Image Factory
+
+on: workflow_dispatch # Manual start karne ke liye
+
+jobs:
+  run-bots:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      # YAHAN 5 MACHINES SET HAIN (Machine 1 se 5)
+      matrix:
+        machine_id: [1, 2, 3, 4, 5]
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install playwright requests
+        playwright install chromium
+
+    - name: Run Python Script (Passing Machine ID)
+      run: python main.py --machine_id ${{ matrix.machine_id }}
+
+    # KAAM KHATAM HONE KE BAAD IMAGES ZIP KARKE DOWNLOAD KE LIYE DENA
+    - name: Upload Images to Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: Images_Machine_${{ matrix.machine_id }}
+        path: bing_automated_images/
