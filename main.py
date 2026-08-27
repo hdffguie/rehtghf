@@ -42,7 +42,7 @@ def run_browser_worker(worker_id, ages_list):
                 page.goto("https://www.bing.com/images/create")
                 time.sleep(5)
                 
-                prompt = f"A highly realistic FULL-BODY wide shot photograph of an Indian male from head to toe. He is standing straight, showing full arms, hands, and legs clearly. Wearing a simple blue t-shirt and casual pants, solid grey background. Age {age}"
+                prompt = f"A highly realistic FULL-BODY wide shot photograph of EXACTLY ONE single Indian male standing alone inside a hardcore bodybuilding gym. DO NOT show multiple people. NO BEFORE/AFTER COLLAGE. ABSOLUTELY NO TEXT, NO LETTERS, NO NUMBERS, AND NO WATERMARKS ON THE IMAGE. He is standing straight facing the camera, wearing only black gym shorts (no shirt), showing full arms, chest, and legs clearly. Gym Muscle Transformation Journey: Day {day}."
                 
                 print(f"[Worker {worker_id}] Typing Age {age}...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
