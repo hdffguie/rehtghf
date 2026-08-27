@@ -5,6 +5,7 @@ import os
 import argparse
 import concurrent.futures
 
+# Folder kahan save hoga
 SAVE_FOLDER = "bing_automated_images"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
@@ -27,7 +28,9 @@ def download_image(url, filename):
     except Exception as e:
         print(f"❌ Error: {e}")
 
-# Yeh function 1 browser ka kaam sambhalega
+# ==========================================
+# WORKER FUNCTION (Jo har image banayega)
+# ==========================================
 def run_browser_worker(worker_id, ages_list):
     print(f"🤖 Worker {worker_id} started! Uske hisse ki Ages: {ages_list}")
     
@@ -40,10 +43,10 @@ def run_browser_worker(worker_id, ages_list):
             
             try:
                 page.goto("https://www.bing.com/images/create")
-                time.sleep(5)
+                time.sleep(5) # Page load hone ka chota wait
                 
                 # ==========================================
-                # YAHAN ADD KIYA HAI "THE WEALTH BRAIN"
+                # THE WEALTH BRAIN (Kapde aur Background)
                 # ==========================================
                 appearance = ""
                 
@@ -58,7 +61,6 @@ def run_browser_worker(worker_id, ages_list):
                 else: 
                     appearance = "a cosmic trillionaire god-king in glowing gold diamond armor, standing in a futuristic neon sci-fi cyber city"
 
-                # Prompt ab sahi se appearance uthayega
                 prompt = f"8k hyper-realistic FULL-BODY wide shot of EXACTLY ONE Indian male. NO TEXT, NO LETTERS, NO WATERMARKS, NO COLLAGE. Facing camera straight. Cinematic lighting, ultra-detailed. He is {appearance}. Evolution of wealth, Stage {age}."
                 
                 print(f"[Worker {worker_id}] Typing Age {age}...")
@@ -72,32 +74,59 @@ def run_browser_worker(worker_id, ages_list):
                 generate_btn = page.locator("button:has-text('Generate'), button:has-text('Create'), button:has-text('Join'), #create_btn_c").first
                 generate_btn.click()
                 
-                print(f"[Worker {worker_id}] Waiting 30 sec for Age {age}...")
-                time.sleep(30) 
-                
-                all_image_srcs = page.evaluate("() => Array.from(document.querySelectorAll('img')).map(img => img.src)")
+                # ==========================================
+                # SMART WAIT (Max 70 Seconds wait karega)
+                # ==========================================
+                print(f"[Worker {worker_id}] Waiting for AI to build Age {age}... (Smart Wait Max 70s)")
                 
                 img_url = None
-                for src in all_image_srcs:
-                    if "OIG" in src:
-                        img_url = src
+                # 35 loop x 2 seconds = 70 seconds
+                for attempt in range(35):
+                    time.sleep(2) # Har 2 second me check karega
+                    
+                    # Page par saari images check karo
+                    all_image_srcs = page.evaluate("() => Array.from(document.querySelectorAll('img')).map(img => img.src)")
+                    
+                    # AI wali image (Jisme 'OIG' hota hai) dhundho
+                    for src in all_image_srcs:
+                        if "OIG" in src:
+                            img_url = src
+                            break 
+                    
+                    # Agar image mil gayi toh loop tod do
+                    if img_url:
+                        print(f"[Worker {worker_id}] 🎉 Image found in {attempt * 2 + 2} seconds!")
                         break 
                 
+                # ==========================================
+                # DOWNLOAD YA ERROR SCREENSHOT
+                # ==========================================
                 if img_url:
                     filepath = os.path.join(SAVE_FOLDER, f"Age_{age}.jpg")
                     download_image(img_url, filepath)
                 else:
-                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Age {age} ke liye.")
+                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Age {age} ke liye. Taking Screenshot...")
+                    # Agar 70 second baad bhi nahi aayi, toh screenshot le lo taaki baad me check kar sakein
+                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Age_{age}.png"))
+                    with open(os.path.join(SAVE_FOLDER, "failed_ages.txt"), "a") as f:
+                        f.write(f"Age {age} failed (Timeout ya Block)\n")
                     
             except Exception as e:
                 print(f"⚠️ Error for Age {age}: {e}")
+                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Age_{age}.png"))
+                with open(os.path.join(SAVE_FOLDER, "failed_ages.txt"), "a") as f:
+                    f.write(f"Age {age} failed (Crash)\n")
             finally:
+                # Har image ke baad browser naya khulega
                 browser.close()
                 
+        # Nayi image banne se pehle 5 second ka rest
         time.sleep(5)
 
+# ==========================================
+# MATHS & PARALLEL PROCESSING
+# ==========================================
 if __name__ == "__main__":
-    # GitHub action se Machine ID mangna
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine_id", type=int, required=True)
     args = parser.parse_args()
@@ -105,16 +134,12 @@ if __name__ == "__main__":
     machine_id = args.machine_id
     print(f"🖥️ MACHINE {machine_id} STARTED!")
     
-    # MATHS: Kaam ka bantwara
-    # Har machine ke andar 2 worker honge.
     worker_1_id = (machine_id - 1) * 2 + 1
     worker_2_id = (machine_id - 1) * 2 + 2
     
-    # Har worker ko 10 ages milengi
     worker_1_ages = list(range((worker_1_id - 1) * 10 + 1, worker_1_id * 10 + 1))
     worker_2_ages = list(range((worker_2_id - 1) * 10 + 1, worker_2_id * 10 + 1))
     
-    # 2 Chrome browsers ko ek sath (Parallel) chalana
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         executor.submit(run_browser_worker, worker_1_id, worker_1_ages)
         executor.submit(run_browser_worker, worker_2_id, worker_2_ages)
