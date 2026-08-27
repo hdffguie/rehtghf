@@ -42,7 +42,24 @@ def run_browser_worker(worker_id, ages_list):
                 page.goto("https://www.bing.com/images/create")
                 time.sleep(5)
                 
-                prompt = f"A highly realistic FULL-BODY wide shot photograph of EXACTLY ONE single Indian male standing alone inside a hardcore bodybuilding gym. DO NOT show multiple people. NO BEFORE/AFTER COLLAGE. ABSOLUTELY NO TEXT, NO LETTERS, NO NUMBERS, AND NO WATERMARKS ON THE IMAGE. He is standing straight facing the camera, wearing only black gym shorts (no shirt), showing full arms, chest, and legs clearly. Gym Muscle Transformation Journey: Day {age}."
+                # ==========================================
+                # YAHAN ADD KIYA HAI "THE WEALTH BRAIN"
+                # ==========================================
+                appearance = ""
+                
+                if age <= 20:
+                    appearance = "extremely poor, wearing dirty torn oversized clothes, standing in a dark dusty street alley with trash"
+                elif age <= 40:
+                    appearance = "middle-class, wearing clean casual shirt and pants, standing inside a simple modern office workspace"
+                elif age <= 60:
+                    appearance = "a rich millionaire in a sharp tailored suit with a tie, standing inside a luxury glass high-rise penthouse"
+                elif age <= 80:
+                    appearance = "an ultra-wealthy billionaire in a designer tuxedo, standing on a private runway near a sleek private jet"
+                else: 
+                    appearance = "a cosmic trillionaire god-king in glowing gold diamond armor, standing in a futuristic neon sci-fi cyber city"
+
+                # Prompt ab sahi se appearance uthayega
+                prompt = f"8k hyper-realistic FULL-BODY wide shot of EXACTLY ONE Indian male. NO TEXT, NO LETTERS, NO WATERMARKS, NO COLLAGE. Facing camera straight. Cinematic lighting, ultra-detailed. He is {appearance}. Evolution of wealth, Stage {age}."
                 
                 print(f"[Worker {worker_id}] Typing Age {age}...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
