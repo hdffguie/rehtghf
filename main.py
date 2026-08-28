@@ -29,12 +29,12 @@ def download_image(url, filename):
         print(f"❌ Error: {e}")
 
 # ==========================================
-# WORKER FUNCTION (Jo har image banayega)
+# WORKER FUNCTION
 # ==========================================
-def run_browser_worker(worker_id, emoji_list):
-    print(f"🤖 Worker {worker_id} started! Uske hisse ke Emojis: {emoji_list}")
+def run_browser_worker(worker_id, frames_list):
+    print(f"🤖 Worker {worker_id} started! Frames: {frames_list}")
     
-    for emoji_id in emoji_list:
+    for frame in frames_list:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True, args=["--start-maximized"])
             context = browser.new_context() 
@@ -45,25 +45,25 @@ def run_browser_worker(worker_id, emoji_list):
                 time.sleep(5) 
                 
                 # ==========================================
-                # THE CRAZY LAUGHING BRAIN (Hasi ka Pagalpan)
+                # THE LION GROWTH BRAIN 🦁
                 # ==========================================
-                expression = ""
+                lion_stage = ""
                 
-                if emoji_id <= 20:
-                    expression = "chuckling mischievously, pointing a finger directly at the viewer and laughing with a few tears, highly detailed roasting 3D emoji"
-                elif emoji_id <= 40:
-                    expression = "laughing hysterically, crying a massive waterfall of tears, holding its stomach in extreme comedy, highly exaggerated 3D emoji"
-                elif emoji_id <= 60:
-                    expression = "rolling on the floor laughing, mouth wide open in a chaotic funny roar, spitting out tears, wild and crazy roasting 3D emoji"
-                elif emoji_id <= 80:
-                    expression = "going absolutely insane with laughter, mind-blowing extreme crazy face, eyes popping out comically, hyper-exaggerated surreal roasting 3D emoji"
-                else: # 81 se 100 tak
-                    expression = "ultimate chaotic god-level laughter, breaking reality, melting with extreme uncontrollable comedy, never-seen-before bizarre and insanely funny 3D roasting emoji"
+                if frame <= 20:
+                    lion_stage = "an adorable tiny newborn lion cub, fluffy golden fur, big innocent blue eyes, tiny paws, sitting on warm African grass in golden sunlight, National Geographic photography"
+                elif frame <= 40:
+                    lion_stage = "a playful young lion cub, growing bigger, starting to get a slight golden mane, running through tall savanna grass, playful energy, wildlife documentary style"
+                elif frame <= 60:
+                    lion_stage = "a teenage lion with a growing medium-length mane, strong muscular body forming, standing on a rocky hill, dramatic sunset lighting, powerful roar beginning"
+                elif frame <= 80:
+                    lion_stage = "a fully grown adult male lion with a massive thick golden mane, powerful muscular body, standing proudly on a rock, majestic and fearsome, golden hour lighting"
+                else:
+                    lion_stage = "an ultimate god-level massive alpha lion king, enormous glowing golden mane flowing like fire, scarred battle-hardened face, standing on highest mountain peak, lightning storm in background, epic legendary creature"
 
-                # PROMPT: Solid Green Background + Extreme Unique Style
-                prompt = f"A completely unique, never-seen-before ultra-HD 3D glossy emoji face. ABSOLUTELY NO TEXT, NO LETTERS. {expression}. Isolated on a PURE BRIGHT SOLID GREEN background for chroma key. Masterpiece, hyper-detailed meme style, variation {emoji_id}."
+                # PROMPT
+                prompt = f"8k ultra-realistic wildlife photography. EXACTLY ONE single African lion. NO TEXT, NO WATERMARKS, NO COLLAGE. {lion_stage}. Frame {frame} of 100. Cinematic lighting, National Geographic quality, hyper-detailed fur, photorealistic."
                 
-                print(f"[Worker {worker_id}] Typing Emoji {emoji_id}...")
+                print(f"[Worker {worker_id}] Typing Frame {frame}...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
                 if not search_box.is_visible():
                     search_box = page.locator("textarea[name='q'], #sb_form_q").first
@@ -74,10 +74,7 @@ def run_browser_worker(worker_id, emoji_list):
                 generate_btn = page.locator("button:has-text('Generate'), button:has-text('Create'), button:has-text('Join'), #create_btn_c").first
                 generate_btn.click()
                 
-                # ==========================================
-                # SMART WAIT (Max 70 Seconds wait karega)
-                # ==========================================
-                print(f"[Worker {worker_id}] Waiting for AI to build Emoji {emoji_id}...")
+                print(f"[Worker {worker_id}] Waiting max 70s for Frame {frame}...")
                 
                 img_url = None
                 for attempt in range(35):
@@ -93,21 +90,18 @@ def run_browser_worker(worker_id, emoji_list):
                         print(f"[Worker {worker_id}] 🎉 Image found in {attempt * 2 + 2} seconds!")
                         break 
                 
-                # ==========================================
-                # DOWNLOAD YA ERROR SCREENSHOT
-                # ==========================================
                 if img_url:
-                    filepath = os.path.join(SAVE_FOLDER, f"Emoji_{emoji_id}.jpg")
+                    filepath = os.path.join(SAVE_FOLDER, f"Lion_{frame}.jpg")
                     download_image(img_url, filepath)
                 else:
-                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Emoji {emoji_id} ke liye. Taking Screenshot...")
-                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Emoji_{emoji_id}.png"))
-                    with open(os.path.join(SAVE_FOLDER, "failed_emojis.txt"), "a") as f:
-                        f.write(f"Emoji {emoji_id} failed\n")
+                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Frame {frame} ke liye.")
+                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Lion_{frame}.png"))
+                    with open(os.path.join(SAVE_FOLDER, "failed_lions.txt"), "a") as f:
+                        f.write(f"Frame {frame} failed\n")
                     
             except Exception as e:
-                print(f"⚠️ Error for Emoji {emoji_id}: {e}")
-                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Emoji_{emoji_id}.png"))
+                print(f"⚠️ Error for Frame {frame}: {e}")
+                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Lion_{frame}.png"))
             finally:
                 browser.close()
                 
