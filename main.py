@@ -5,7 +5,7 @@ import os
 import argparse
 import concurrent.futures
 
-# GitHub Actions ki YAML file yahi folder dhund rahi hai, isliye naam wapas change kiya
+# Folder ka naam same rakha hai taaki GitHub zip bana sake
 SAVE_FOLDER = "bing_automated_images"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
@@ -34,36 +34,31 @@ def download_image(url, filename):
 def run_browser_worker(worker_id, frames_list):
     print(f"🤖 Worker {worker_id} started! Frames: {frames_list}")
     
-    exercises = [
-        "deadlifting", "doing bench press", "doing heavy squats", 
-        "doing pull-ups", "curling dumbbells", "using cable machines", 
-        "pushing a sled", "doing shoulder press", "doing T-bar rows", "doing dips"
-    ]
-    
-    environments = [
-        "dark underground gym", "neon cyberpunk gym", "rusty iron gym", 
-        "industrial crossfit box", "spotlight lit gym", "high-tech gym", 
-        "rooftop gym at night", "basement gym", "red-lit gym", "outdoor muscle beach"
-    ]
-    
-    masks = [
-        "a black workout breathing mask", "a futuristic sports mask", 
-        "an elevation mask", "a dark cloth wrap covering his mouth", "a cool gym half-mask"
-    ]
-    
-    body_types = [
-        "massive bodybuilder", "shredded lifter", 
-        "huge powerlifter", "aesthetic fitness model"
+    # 10 Aesthetic / Cute Backgrounds (Tumhari image jaisi vibes)
+    backgrounds = [
+        "a cozy coffee mug on a wooden table beside a warm brown textured wall",
+        "a beautiful aesthetic sunrise through a bedroom window with soft light",
+        "a cute desk setup with a tiny cactus and warm pastel pink wall",
+        "a rainy glass window with cozy warm bokeh lights in the background",
+        "soft glowing fairy lights over a cozy bed with fluffy white pillows",
+        "two cups of tea on a table with a beautiful aesthetic sunset background",
+        "a minimalistic pastel blue wall with soft sunlight hitting it",
+        "a soft aesthetic peach-colored background with scattered rose petals",
+        "a cute cafe table with a heart-shaped latte art and a notebook",
+        "a warm evening aesthetic setup with a glowing table lamp and textured wall"
     ]
 
-    quote_line_1 = [
-        "NO EXCUSES", "PUSH HARDER", "EMBRACE PAIN", "SWEAT TODAY", "GRIND NOW", 
-        "LIFT HEAVY", "STAY FOCUSED", "BEAST MODE", "NEVER QUIT", "RISE & GRIND"
+    # Daily Chat / Casual Messaging Parts (10x10 = 100 Unique phrases)
+    # Part 1 (Greetings / Openers)
+    chat_part_1 = [
+        "Good Morning", "Hello ji", "Hey you", "Oye suno", "Aur batao", 
+        "Kaise ho?", "Kya haal hai?", "Good Evening", "Kkrh?", "Hi there"
     ]
     
-    quote_line_2 = [
-        "SHINE TOMORROW", "CONQUER ALL", "BE UNSTOPPABLE", "PROVE THEM WRONG", "GROW STRONGER", 
-        "OWN SUCCESS", "DEFEAT DEMONS", "EARN RESPECT", "BUILD LEGACY", "TRUST PROCESS"
+    # Part 2 (Follow-ups / Cute texts)
+    chat_part_2 = [
+        "have a great day", "chai pi lo", "miss you", "take care", "smile please :)", 
+        "sab badhiya?", "khana khaya?", "kya kar rahe ho?", "milte hain", "yaad aayi?"
     ]
 
     for frame in frames_list:
@@ -76,24 +71,24 @@ def run_browser_worker(worker_id, frames_list):
                 page.goto("https://www.bing.com/images/create")
                 time.sleep(5) 
                 
-                # Math for uniqueness
+                # Math for uniqueness (Background aur Text har photo mein change hoga)
                 idx = frame - 1
-                ex = exercises[idx % len(exercises)]
-                env = environments[(idx + 2) % len(environments)]
-                mask = masks[(idx + 1) % len(masks)]
-                body = body_types[(idx + 3) % len(body_types)]
+                bg = backgrounds[idx % len(backgrounds)]
                 
-                line1 = quote_line_1[idx % 10]
-                line2 = quote_line_2[(idx // 10) % 10]
+                line1 = chat_part_1[idx % 10]
+                line2 = chat_part_2[(idx // 10) % 10]
 
-                # PROMPT SHORTENED (Under 250 characters to avoid blank/failed images)
+                # ==========================================
+                # NEW SHORT AESTHETIC PROMPT
+                # ==========================================
+                # Prompt ko lamba nahi rakha hai, taaki image blank na aaye.
                 prompt = (
-                    f"A {body} {ex} in a {env}. He is wearing {mask}, face hidden. "
-                    f"Bold typography text on the image reading: '{line1}' and below it '{line2}'. "
-                    f"Cinematic gym lighting, photorealistic."
+                    f"Aesthetic Pinterest photography. {bg}. "
+                    f"Direct front view. Cute, casual white handwritten text exactly reading "
+                    f"'{line1} {line2}' written beautifully on the wall or empty space. Cozy vibe, photorealistic."
                 )
                 
-                print(f"[Worker {worker_id}] Typing Frame {frame} (Len: {len(prompt)} chars)...")
+                print(f"[Worker {worker_id}] Typing Frame {frame} (Text: {line1} {line2})...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
                 if not search_box.is_visible():
                     search_box = page.locator("textarea[name='q'], #sb_form_q").first
@@ -121,22 +116,25 @@ def run_browser_worker(worker_id, frames_list):
                         break 
                 
                 if img_url:
-                    filepath = os.path.join(SAVE_FOLDER, f"GymMotivation_{frame}.jpg")
+                    filepath = os.path.join(SAVE_FOLDER, f"CuteChat_{frame}.jpg")
                     download_image(img_url, filepath)
                 else:
                     print(f"⚠️ [Worker {worker_id}] Image nahi mili Frame {frame} ke liye.")
-                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Gym_{frame}.png"))
-                    with open(os.path.join(SAVE_FOLDER, "failed_gym.txt"), "a") as f:
+                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Chat_{frame}.png"))
+                    with open(os.path.join(SAVE_FOLDER, "failed_chats.txt"), "a") as f:
                         f.write(f"Frame {frame} failed\n")
                     
             except Exception as e:
                 print(f"⚠️ Error for Frame {frame}: {e}")
-                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Gym_{frame}.png"))
+                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Chat_{frame}.png"))
             finally:
                 browser.close()
                 
         time.sleep(5)
 
+# ==========================================
+# MATHS & PARALLEL PROCESSING
+# ==========================================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine_id", type=int, required=True)
