@@ -5,8 +5,8 @@ import os
 import argparse
 import concurrent.futures
 
-# Folder kahan save hoga
-SAVE_FOLDER = "bing_gym_motivation_images"
+# GitHub Actions ki YAML file yahi folder dhund rahi hai, isliye naam wapas change kiya
+SAVE_FOLDER = "bing_automated_images"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
 def download_image(url, filename):
@@ -34,37 +34,36 @@ def download_image(url, filename):
 def run_browser_worker(worker_id, frames_list):
     print(f"🤖 Worker {worker_id} started! Frames: {frames_list}")
     
-    # 100 unique combinations banane ke liye lists
     exercises = [
-        "deadlifting heavy weights", "doing heavy bench press", "performing heavy squats", 
-        "doing strict pull-ups", "curling heavy dumbbells", "doing cable crossovers", 
-        "pushing a heavy sled", "doing overhead shoulder press", "performing T-bar rows", "doing weighted dips"
+        "deadlifting", "doing bench press", "doing heavy squats", 
+        "doing pull-ups", "curling dumbbells", "using cable machines", 
+        "pushing a sled", "doing shoulder press", "doing T-bar rows", "doing dips"
     ]
     
     environments = [
-        "underground gritty warehouse gym", "modern neon-lit cyberpunk gym", "old-school rusty iron gym", 
-        "industrial crossfit box", "dark atmospheric gym with spotlight", "luxurious high-tech gym", 
-        "rooftop gym at night", "basement gym with concrete walls", "red-lit intense training facility", "golden hour outdoor muscle beach style gym"
+        "dark underground gym", "neon cyberpunk gym", "rusty iron gym", 
+        "industrial crossfit box", "spotlight lit gym", "high-tech gym", 
+        "rooftop gym at night", "basement gym", "red-lit gym", "outdoor muscle beach"
     ]
     
     masks = [
-        "a black tactical training mask", "a full-face reflective futuristic visor", 
-        "a heavy-duty elevation breathing mask", "a dark cloth face wrap", "a skull-patterned half mask"
+        "a black workout breathing mask", "a futuristic sports mask", 
+        "an elevation mask", "a dark cloth wrap covering his mouth", "a cool gym half-mask"
     ]
     
     body_types = [
-        "massive muscular bodybuilder", "shredded athletic lifter", 
-        "huge heavy-weight powerlifter", "lean and aesthetic fitness model"
+        "massive bodybuilder", "shredded lifter", 
+        "huge powerlifter", "aesthetic fitness model"
     ]
 
-    # Quotes mixing (10 x 10 = 100 unique quotes)
     quote_line_1 = [
-        "NO EXCUSES", "PUSH HARDER", "EMBRACE THE PAIN", "SWEAT TODAY", "GRIND NOW", 
-        "LIFT HEAVY", "STAY FOCUSED", "BEAST MODE", "NEVER GIVE UP", "RISE AND GRIND"
+        "NO EXCUSES", "PUSH HARDER", "EMBRACE PAIN", "SWEAT TODAY", "GRIND NOW", 
+        "LIFT HEAVY", "STAY FOCUSED", "BEAST MODE", "NEVER QUIT", "RISE & GRIND"
     ]
+    
     quote_line_2 = [
-        "SHINE TOMORROW", "CONQUER EVERYTHING", "BECOME UNSTOPPABLE", "PROVE THEM WRONG", "GROW STRONGER", 
-        "OWN YOUR SUCCESS", "DEFEAT YOUR DEMONS", "EARN YOUR RESPECT", "BUILD YOUR LEGACY", "TRUST THE PROCESS"
+        "SHINE TOMORROW", "CONQUER ALL", "BE UNSTOPPABLE", "PROVE THEM WRONG", "GROW STRONGER", 
+        "OWN SUCCESS", "DEFEAT DEMONS", "EARN RESPECT", "BUILD LEGACY", "TRUST PROCESS"
     ]
 
     for frame in frames_list:
@@ -77,30 +76,24 @@ def run_browser_worker(worker_id, frames_list):
                 page.goto("https://www.bing.com/images/create")
                 time.sleep(5) 
                 
-                # ==========================================
-                # THE GYM MOTIVATION BRAIN 🏋️‍♂️
-                # ==========================================
-                # Modulo maths to ensure every frame is different
+                # Math for uniqueness
                 idx = frame - 1
                 ex = exercises[idx % len(exercises)]
                 env = environments[(idx + 2) % len(environments)]
                 mask = masks[(idx + 1) % len(masks)]
                 body = body_types[(idx + 3) % len(body_types)]
                 
-                # Generate unique 2-line quote for this frame
                 line1 = quote_line_1[idx % 10]
                 line2 = quote_line_2[(idx // 10) % 10]
 
-                # PROMPT CONSTRUCTION
+                # PROMPT SHORTENED (Under 250 characters to avoid blank/failed images)
                 prompt = (
-                    f"8k ultra-realistic fitness photography. A {body} {ex} in a {env}. "
-                    f"The man's face is completely hidden by {mask}. No recognizable facial features, identity hidden. "
-                    f"In the exact center of the image, bold epic typography text exactly reading: '{line1}' on the first line, "
-                    f"and '{line2}' on the second line. "
-                    "Cinematic dramatic lighting, hyper-detailed sweat and muscle definition, photorealistic, highly motivational."
+                    f"A {body} {ex} in a {env}. He is wearing {mask}, face hidden. "
+                    f"Bold typography text on the image reading: '{line1}' and below it '{line2}'. "
+                    f"Cinematic gym lighting, photorealistic."
                 )
                 
-                print(f"[Worker {worker_id}] Typing Frame {frame} (Quote: {line1} / {line2})...")
+                print(f"[Worker {worker_id}] Typing Frame {frame} (Len: {len(prompt)} chars)...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
                 if not search_box.is_visible():
                     search_box = page.locator("textarea[name='q'], #sb_form_q").first
@@ -144,9 +137,6 @@ def run_browser_worker(worker_id, frames_list):
                 
         time.sleep(5)
 
-# ==========================================
-# MATHS & PARALLEL PROCESSING
-# ==========================================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine_id", type=int, required=True)
