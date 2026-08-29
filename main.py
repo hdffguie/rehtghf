@@ -6,7 +6,7 @@ import argparse
 import concurrent.futures
 
 # Folder kahan save hoga
-SAVE_FOLDER = "bing_automated_images"
+SAVE_FOLDER = "bing_gym_motivation_images"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
 def download_image(url, filename):
@@ -34,6 +34,39 @@ def download_image(url, filename):
 def run_browser_worker(worker_id, frames_list):
     print(f"🤖 Worker {worker_id} started! Frames: {frames_list}")
     
+    # 100 unique combinations banane ke liye lists
+    exercises = [
+        "deadlifting heavy weights", "doing heavy bench press", "performing heavy squats", 
+        "doing strict pull-ups", "curling heavy dumbbells", "doing cable crossovers", 
+        "pushing a heavy sled", "doing overhead shoulder press", "performing T-bar rows", "doing weighted dips"
+    ]
+    
+    environments = [
+        "underground gritty warehouse gym", "modern neon-lit cyberpunk gym", "old-school rusty iron gym", 
+        "industrial crossfit box", "dark atmospheric gym with spotlight", "luxurious high-tech gym", 
+        "rooftop gym at night", "basement gym with concrete walls", "red-lit intense training facility", "golden hour outdoor muscle beach style gym"
+    ]
+    
+    masks = [
+        "a black tactical training mask", "a full-face reflective futuristic visor", 
+        "a heavy-duty elevation breathing mask", "a dark cloth face wrap", "a skull-patterned half mask"
+    ]
+    
+    body_types = [
+        "massive muscular bodybuilder", "shredded athletic lifter", 
+        "huge heavy-weight powerlifter", "lean and aesthetic fitness model"
+    ]
+
+    # Quotes mixing (10 x 10 = 100 unique quotes)
+    quote_line_1 = [
+        "NO EXCUSES", "PUSH HARDER", "EMBRACE THE PAIN", "SWEAT TODAY", "GRIND NOW", 
+        "LIFT HEAVY", "STAY FOCUSED", "BEAST MODE", "NEVER GIVE UP", "RISE AND GRIND"
+    ]
+    quote_line_2 = [
+        "SHINE TOMORROW", "CONQUER EVERYTHING", "BECOME UNSTOPPABLE", "PROVE THEM WRONG", "GROW STRONGER", 
+        "OWN YOUR SUCCESS", "DEFEAT YOUR DEMONS", "EARN YOUR RESPECT", "BUILD YOUR LEGACY", "TRUST THE PROCESS"
+    ]
+
     for frame in frames_list:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True, args=["--start-maximized"])
@@ -45,25 +78,29 @@ def run_browser_worker(worker_id, frames_list):
                 time.sleep(5) 
                 
                 # ==========================================
-                # THE LION GROWTH BRAIN 🦁
+                # THE GYM MOTIVATION BRAIN 🏋️‍♂️
                 # ==========================================
-                lion_stage = ""
+                # Modulo maths to ensure every frame is different
+                idx = frame - 1
+                ex = exercises[idx % len(exercises)]
+                env = environments[(idx + 2) % len(environments)]
+                mask = masks[(idx + 1) % len(masks)]
+                body = body_types[(idx + 3) % len(body_types)]
                 
-                if frame <= 20:
-                    lion_stage = "an adorable tiny newborn lion cub, fluffy golden fur, big innocent blue eyes, tiny paws, sitting on warm African grass in golden sunlight, National Geographic photography"
-                elif frame <= 40:
-                    lion_stage = "a playful young lion cub, growing bigger, starting to get a slight golden mane, running through tall savanna grass, playful energy, wildlife documentary style"
-                elif frame <= 60:
-                    lion_stage = "a teenage lion with a growing medium-length mane, strong muscular body forming, standing on a rocky hill, dramatic sunset lighting, powerful roar beginning"
-                elif frame <= 80:
-                    lion_stage = "a fully grown adult male lion with a massive thick golden mane, powerful muscular body, standing proudly on a rock, majestic and fearsome, golden hour lighting"
-                else:
-                    lion_stage = "an ultimate god-level massive alpha lion king, enormous glowing golden mane flowing like fire, scarred battle-hardened face, standing on highest mountain peak, lightning storm in background, epic legendary creature"
+                # Generate unique 2-line quote for this frame
+                line1 = quote_line_1[idx % 10]
+                line2 = quote_line_2[(idx // 10) % 10]
 
-                # PROMPT
-                prompt = f"8k ultra-realistic wildlife photography. EXACTLY ONE single African lion. NO TEXT, NO WATERMARKS, NO COLLAGE. {lion_stage}. Frame {frame} of 100. Cinematic lighting, National Geographic quality, hyper-detailed fur, photorealistic."
+                # PROMPT CONSTRUCTION
+                prompt = (
+                    f"8k ultra-realistic fitness photography. A {body} {ex} in a {env}. "
+                    f"The man's face is completely hidden by {mask}. No recognizable facial features, identity hidden. "
+                    f"In the exact center of the image, bold epic typography text exactly reading: '{line1}' on the first line, "
+                    f"and '{line2}' on the second line. "
+                    "Cinematic dramatic lighting, hyper-detailed sweat and muscle definition, photorealistic, highly motivational."
+                )
                 
-                print(f"[Worker {worker_id}] Typing Frame {frame}...")
+                print(f"[Worker {worker_id}] Typing Frame {frame} (Quote: {line1} / {line2})...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
                 if not search_box.is_visible():
                     search_box = page.locator("textarea[name='q'], #sb_form_q").first
@@ -91,17 +128,17 @@ def run_browser_worker(worker_id, frames_list):
                         break 
                 
                 if img_url:
-                    filepath = os.path.join(SAVE_FOLDER, f"Lion_{frame}.jpg")
+                    filepath = os.path.join(SAVE_FOLDER, f"GymMotivation_{frame}.jpg")
                     download_image(img_url, filepath)
                 else:
                     print(f"⚠️ [Worker {worker_id}] Image nahi mili Frame {frame} ke liye.")
-                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Lion_{frame}.png"))
-                    with open(os.path.join(SAVE_FOLDER, "failed_lions.txt"), "a") as f:
+                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Gym_{frame}.png"))
+                    with open(os.path.join(SAVE_FOLDER, "failed_gym.txt"), "a") as f:
                         f.write(f"Frame {frame} failed\n")
                     
             except Exception as e:
                 print(f"⚠️ Error for Frame {frame}: {e}")
-                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Lion_{frame}.png"))
+                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Gym_{frame}.png"))
             finally:
                 browser.close()
                 
