@@ -4,10 +4,14 @@ import requests
 import os
 import argparse
 import concurrent.futures
+import math
+import sys
+import re  # New module for removing numbers from prompt
 
-# GitHub Actions ke liye same folder
+# Folder kahan save hoga
 SAVE_FOLDER = "bing_automated_images"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
+PROMPT_FILE = "prompts.txt"
 
 def download_image(url, filename):
     try:
@@ -29,83 +33,12 @@ def download_image(url, filename):
         print(f"❌ Error: {e}")
 
 # ==========================================
-# 100 CHAT LINES PROVIDED BY YOU
-# ==========================================
-CHAT_LINES = [
-    "Chai pi lo", "Aur kya ho rha hai?", "Ghoomne chalein?", "Tu mera bhai hai", 
-    "Oye kya kar rha hai?", "Hello bhai kaha hai?", "Khana khaya tune?", "Free hokar call kar", 
-    "Aaj ka kya plan hai?", "Yaar bahut bore ho rha hu", "Chal chai peene chalte hain", 
-    "Ghar pahunch kar message karna", "Aur bhai kya scene hai?", "Tu to bhool hi gaya bhai", 
-    "Chal jhoothe sab pata hai", "Bhai tu rehne de tujhse na ho payega", "Itna bhaav kyu kha rha hai?", 
-    "Party kab de rha hai phir?", "Bada aadmi ban gaya tu to", "Chal jyada gyaan mat baant", 
-    "Bahut tez ho rhe ho hain!", "Tu to mera jigri hai yaar", "Phone utha le bhai urgent hai", 
-    "Kaha gayab hai aaj kal?", "Nautanki band kar ab apni", "Chup kar bhai kitna bolta hai", 
-    "Chal nikal jyada mat bol", "Ek mast khabar sunau?", "Are yaar ek gadbad ho gayi", 
-    "Tune wo reels dekhi kya?", "Aaj to maza hi aa gaya", "Mujhe pehle kyu nahi bataya?", 
-    "Chalo kuch order karte hain", "Aaj mera mood kharab hai", "Sach me aisa hua kya?", 
-    "Tu hamesha late kyu hota hai?", "Raaste me hu bas 5 minute", "Jhooth mat bol tu ghar pe hai", 
-    "Tera bhai hamesha tere sath hai", "Tension mat le sab theek hoga", "Chal jo hoga dekha jayega", 
-    "Haan bhai bol", "Na yaar man nahi hai", "Okay done hai", "Abhi busy hu baad me baat karte hain", 
-    "Are haan yaad aaya!", "Bilkul sahi bola tune", "Are yaar shit!", "Lol kya bakwaas hai", 
-    "Hahaha bhai maaro mujhe", "Kasam se?", "Nice yaar!", "Bye take care", "Good morning bhai", 
-    "Good night so ja ab", "Message dekh mera", "Kaha reh gaya tu?", "Jaldi aa yaar", "Koi baat nahi", 
-    "Dekhte hain chalo", "Shaam ko kitne baje milega?", "Location bhej apni", "Network nahi aa rha yaar", 
-    "Mera phone discharge hone wala hai", "Insta check kar kuch bheja hai", "Bhai ek help chahiye thi", 
-    "Paise kab waapas karega bhai?", "Aaj raat ko game khelein?", "Koi acchi movie bata yaar", 
-    "Mera to dimag kharab ho gaya", "Chal baad me call karta hu", "Kal sunday hai kuch karte hain", 
-    "Khana kha ke milte hain", "Are tune suna kya?", "Tu bahut badal gaya hai", "Gussa mat ho yaar ab", 
-    "Chalo chai pe charcha karte hain", "Tune jo bola wahi sahi", "Bhai tu sach me great hai", 
-    "Chal ab so ja subah baat karte hain", "Yaad aa rahi hai teri", "Khana khaya mere babu ne?", 
-    "Online aa jao na", "Sirf tumhari yaadein aur main", "Aaj bahut pyaare lag rhe high", 
-    "Dil nahi lag rha tere bina", "Ek pyaari si photo bhejo na", "Sapne me bhi tum hi aate ho", 
-    "Love you so much yaar", "Tumhari aawaz sunni hai", "Itna miss mat kiya karo mujhe", 
-    "Naaraaz ho kya mujhse?", "Chalo kahi long drive pe chalein?", "Tum sirf meri ho samjhe?", 
-    "Aaj milne ka man hai", "Tumhare bina sab soona hai", "Good night mere sweetu", 
-    "Jaldi se reply karo na", "Shakal dekhi hai sheeshe me?", "Khatam tata bye-bye"
-]
-
-# Smart Background Function
-def get_smart_background(text):
-    text_lower = text.lower()
-    if any(word in text_lower for word in ["chai", "coffee"]):
-        return "a cozy cafe table with a warm cup of tea and aesthetic warm lighting"
-    elif any(word in text_lower for word in ["night", "so ja", "sweetu", "sapne"]):
-        return "soft glowing fairy lights over a cozy bed in a dark aesthetic room"
-    elif any(word in text_lower for word in ["morning", "uth"]):
-        return "a beautiful golden sunrise shining through a cozy bedroom window"
-    elif any(word in text_lower for word in ["drive", "raaste", "location"]):
-        return "a cinematic view from inside a car driving on a beautiful sunset road"
-    elif any(word in text_lower for word in ["khana", "order"]):
-        return "a cute dining table setup with soft warm aesthetic lighting"
-    elif any(word in text_lower for word in ["reels", "movie", "game", "insta", "phone", "network"]):
-        return "a cozy desk setup with a glowing phone screen and warm ambient light"
-    elif any(word in text_lower for word in ["love", "babu", "yaadein", "miss", "dil", "pyaare"]):
-        return "a soft aesthetic peach-colored background with scattered rose petals and soft bokeh"
-    elif any(word in text_lower for word in ["gussa", "mood kharab", "shit", "bore", "gadbad"]):
-        return "a rainy glass window with cozy warm street bokeh lights in the background"
-    elif any(word in text_lower for word in ["bhai", "yaar", "party", "plan"]):
-        return "a minimalistic dark aesthetic wall with a tiny indoor plant and soft spotlight"
-    else:
-        return "a minimalistic pastel colored aesthetic wall with warm sunlight shadows hitting it"
-
-# Reel-Safe Smart Text Splitter Function
-def format_text_for_reels(text):
-    words = text.split()
-    if len(words) > 3:
-        mid = len(words) // 2
-        line1 = " ".join(words[:mid])
-        line2 = " ".join(words[mid:])
-        return f"'{line1}' on the first line and '{line2}' right below it"
-    else:
-        return f"'{text}'"
-
-# ==========================================
 # WORKER FUNCTION
 # ==========================================
-def run_browser_worker(worker_id, frames_list):
-    print(f"🤖 Worker {worker_id} started! Frames: {frames_list}")
+def run_browser_worker(worker_id, tasks_list):
+    print(f"🤖 Worker {worker_id} started! Processing {len(tasks_list)} images...")
     
-    for frame in frames_list:
+    for image_num, prompt_text in tasks_list:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True, args=["--start-maximized"])
             context = browser.new_context() 
@@ -115,36 +48,22 @@ def run_browser_worker(worker_id, frames_list):
                 page.goto("https://www.bing.com/images/create")
                 time.sleep(5) 
                 
-                idx = frame - 1
-                current_text = CHAT_LINES[idx]
-                smart_bg = get_smart_background(current_text)
-                
-                # Format text for Reels (Multi-line if long)
-                reel_safe_text = format_text_for_reels(current_text)
-
-                # REEL SAFE PROMPT
-                prompt = (
-                    f"Aesthetic Pinterest photography. {smart_bg}. "
-                    f"In the EXACT DEAD CENTER, cute casual white handwritten typography exactly reading {reel_safe_text}. "
-                    f"Leave very wide empty negative space on the left and right edges so it can be cropped vertically. "
-                    f"Cozy vibe, photorealistic, 8k."
-                )
-                
-                print(f"[Worker {worker_id}] Typing Frame {frame} | Text: '{current_text}'")
+                print(f"[Worker {worker_id}] Typing for Image {image_num} | Prompt: {prompt_text[:60]}...")
                 search_box = page.get_by_placeholder("Describe the image you want to create")
                 if not search_box.is_visible():
                     search_box = page.locator("textarea[name='q'], #sb_form_q").first
                 
                 search_box.fill("")
-                search_box.fill(prompt)
+                search_box.fill(prompt_text)
                 
                 generate_btn = page.locator("button:has-text('Generate'), button:has-text('Create'), button:has-text('Join'), #create_btn_c").first
                 generate_btn.click()
                 
-                print(f"[Worker {worker_id}] Waiting max 70s for Frame {frame}...")
+                print(f"[Worker {worker_id}] Waiting max 90s for Image {image_num}...")
                 
                 img_url = None
-                for attempt in range(35):
+                # Thoda time badha diya hai (45 attempts = 90 seconds) taaki slow net me bhi fail na ho
+                for attempt in range(45):
                     time.sleep(2) 
                     all_image_srcs = page.evaluate("() => Array.from(document.querySelectorAll('img')).map(img => img.src)")
                     
@@ -154,45 +73,90 @@ def run_browser_worker(worker_id, frames_list):
                             break 
                     
                     if img_url:
-                        print(f"[Worker {worker_id}] 🎉 Image found in {attempt * 2 + 2} seconds!")
+                        print(f"[Worker {worker_id}] 🎉 Image {image_num} found in {attempt * 2 + 2} seconds!")
                         break 
                 
                 if img_url:
-                    filepath = os.path.join(SAVE_FOLDER, f"CuteChat_{frame}.jpg")
+                    filepath = os.path.join(SAVE_FOLDER, f"Generated_Image_{image_num}.jpg")
                     download_image(img_url, filepath)
                 else:
-                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Frame {frame} ke liye.")
-                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Chat_{frame}.png"))
-                    with open(os.path.join(SAVE_FOLDER, "failed_chats.txt"), "a") as f:
-                        f.write(f"Frame {frame} failed\n")
+                    print(f"⚠️ [Worker {worker_id}] Image nahi mili Image {image_num} ke liye.")
+                    page.screenshot(path=os.path.join(SAVE_FOLDER, f"ERROR_Image_{image_num}.png"))
+                    with open(os.path.join(SAVE_FOLDER, "failed_images.txt"), "a") as f:
+                        f.write(f"Image {image_num} failed\n")
                     
             except Exception as e:
-                print(f"⚠️ Error for Frame {frame}: {e}")
-                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Chat_{frame}.png"))
+                print(f"⚠️ Error for Image {image_num}: {e}")
+                page.screenshot(path=os.path.join(SAVE_FOLDER, f"CRASH_Image_{image_num}.png"))
             finally:
                 browser.close()
                 
         time.sleep(5)
 
 # ==========================================
-# MATHS & PARALLEL PROCESSING
+# FILE READING & PARALLEL PROCESSING MATHS
 # ==========================================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--machine_id", type=int, required=True)
+    parser.add_argument("--machine_id", type=int, required=True, help="Machine Number (e.g. 1, 2, 3...)")
+    parser.add_argument("--total_machines", type=int, default=5, help="Total number of machines running")
     args = parser.parse_args()
     
     machine_id = args.machine_id
-    print(f"🖥️ MACHINE {machine_id} STARTED!")
+    total_machines = args.total_machines
+    print(f"🖥️ MACHINE {machine_id} STARTED (Out of {total_machines} machines)!")
+    
+    # 1. Prompts file read karna
+    if not os.path.exists(PROMPT_FILE):
+        print(f"❌ ERROR: {PROMPT_FILE} nahi mila! Pehle text file banao github par.")
+        sys.exit(1)
+        
+    all_prompts = []
+    with open(PROMPT_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                # SMART FILTER: Ye aage ke numbers (1. , 2. , 100.) ko hita dega
+                clean_line = re.sub(r'^\d+[\.\-\)]?\s*', '', line)
+                all_prompts.append(clean_line)
+        
+    total_prompts = len(all_prompts)
+    print(f"📝 Total Prompts Found: {total_prompts}")
+    
+    if total_prompts == 0:
+        print("❌ ERROR: prompts.txt file khali (empty) hai!")
+        sys.exit(1)
+
+    # 2. Prompts ko Tuple me set karna -> (Image_Number, Clean_Prompt_Text)
+    # Aapne chahe text file me koi bhi numbering ki ho, code images ko 1 se hi save karega (jaise Generated_Image_1.jpg)
+    all_tasks = [(i + 1, all_prompts[i]) for i in range(total_prompts)]
+    
+    # 3. Work divide karna based on total_machines bina repeat kiye
+    chunk_size = math.ceil(total_prompts / total_machines)
+    start_idx = (machine_id - 1) * chunk_size
+    end_idx = min(start_idx + chunk_size, total_prompts)
+    
+    machine_tasks = all_tasks[start_idx:end_idx]
+    
+    if len(machine_tasks) == 0:
+        print(f"⚠️ Machine {machine_id} ke liye koi kaam nahi bacha (Prompts kam hain). Exiting.")
+        sys.exit(0)
+        
+    print(f"⚙️ Machine {machine_id} processing from Image {machine_tasks[0][0]} to {machine_tasks[-1][0]} (Total {len(machine_tasks)} images)")
+    
+    # 4. Machine ke andar 2 Workers ke beech kaam divide karna
+    mid_point = len(machine_tasks) // 2
+    worker_1_tasks = machine_tasks[:mid_point]
+    worker_2_tasks = machine_tasks[mid_point:]
     
     worker_1_id = (machine_id - 1) * 2 + 1
     worker_2_id = (machine_id - 1) * 2 + 2
     
-    worker_1_items = list(range((worker_1_id - 1) * 10 + 1, worker_1_id * 10 + 1))
-    worker_2_items = list(range((worker_2_id - 1) * 10 + 1, worker_2_id * 10 + 1))
-    
+    # 5. Parallel Processing Start
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-        executor.submit(run_browser_worker, worker_1_id, worker_1_items)
-        executor.submit(run_browser_worker, worker_2_id, worker_2_items)
+        if worker_1_tasks:
+            executor.submit(run_browser_worker, worker_1_id, worker_1_tasks)
+        if worker_2_tasks:
+            executor.submit(run_browser_worker, worker_2_id, worker_2_tasks)
     
     print(f"✅ MACHINE {machine_id} NE APNA KAAM KHATAM KAR LIYA!")
