@@ -1,100 +1,203 @@
-पुरानी पहाड़ी बस्ती — घुमावदार पत्थर की सीढ़ियाँ, दोनों तरफ पुराने रंगीन छोटे घर, लाल टाइलों की छत, दूर पहाड़ दिखाई देते हुए, सुबह की हल्की रोशनी।
-घना हरा जंगल — घने पेड़, बीच से जाती छोटी मिट्टी की पगडंडी, बड़े पत्ते, झाड़ियाँ, पेड़ों के बीच से आती सुनहरी sunlight।
-पुराना गाँव का रास्ता — कच्ची सड़क, दोनों तरफ मिट्टी और ईंट के घर, लकड़ी के दरवाजे, छोटे पौधे, शांत ग्रामीण वातावरण।
-नदी किनारे गाँव — सामने पत्थरों वाला छोटा नदी किनारा, पीछे रंगीन घर, लकड़ी का छोटा पुल, हरे पेड़ और पहाड़।
-बारिश वाला शहर — पत्थर की गली, दोनों तरफ पुराने colorful buildings, गीली सड़क पर पानी की reflections, cloudy sky, हल्की बारिश।
-जंगल का लकड़ी वाला पुल — घने जंगल के बीच लकड़ी का पुराना पुल, नीचे छोटी नदी, बड़े पेड़ और बेलें, sunlight filtering through leaves।
-समुद्र किनारे गाँव — पत्थर की छोटी गली, pastel-colored houses, दूर नीला समुद्र, छोटे पौधे, साफ आसमान।
-पुराना किला रास्ता — विशाल पत्थर की दीवारें, सीढ़ियाँ ऊपर जाती हुईं, पुराने lanterns, आसपास बेलें और पेड़।
-फूलों वाला गाँव — छोटी पत्थर की सड़क, colorful पुराने घर, खिड़कियों पर फूलों के गमले, हर तरफ छोटे फूल।
-घाटी का रास्ता — लकड़ी की सीढ़ियाँ, नीचे गहरी हरी घाटी, दूर पहाड़, छोटे घर और cloudy atmospheric background।
-बर्फीला पहाड़ी गाँव — लकड़ी के घर, बर्फ से ढकी छतें, पत्थर की सीढ़ियाँ, pine trees, हल्की नीली ठंडी रोशनी।
-रेगिस्तानी शहर की गली — sandy-colored पुराने घर, पत्थर की गली, wooden doors, छोटे बाजार के छज्जे, गर्म sunlight।
-जंगल में पुराना मंदिर — पत्थर की सीढ़ियाँ, moss-covered walls, विशाल पेड़, बेलें और मंदिर का पुराना entrance।
-पहाड़ी झरना — पत्थरों के बीच गिरता हुआ छोटा waterfall, लकड़ी का रास्ता, आसपास घना जंगल और colorful flowers।
-पुरानी यूरोपीय-style गली — घुमावदार stone pathway, colorful plaster houses, red roofs, छोटे windows, warm afternoon lighting।
-गाँव का चौराहा — चारों ओर पुराने घर, बीच में stone fountain, छोटे पेड़, flower pots, शांत वातावरण।
-पुरानी लकड़ी की बस्ती — wooden houses, narrow staircase, wooden balconies, छोटे lanterns, पहाड़ों की background।
-हरी पहाड़ी पर घर — घास से ढकी पहाड़ी, छोटे colorful cottages, stone pathway, बादलों के बीच sunlight।
-बांस का जंगल — ऊँचे bamboo trees, बीच में पतली मिट्टी की path, soft green lighting, घना प्राकृतिक वातावरण।
-पुरानी नदी की सीढ़ियाँ — stone steps नीचे शांत नदी की तरफ जाती हुईं, दोनों तरफ brick walls, दूर houses।
-सूर्योदय वाला गाँव — पुराने colorful houses, पत्थर की सड़क, दूर पहाड़, orange-pink sunrise sky।
-सूर्यास्त वाली गली — narrow stone street, warm orange sunlight, long shadows, colorful walls और छोटे windows।
-शरद ऋतु का जंगल — orange और yellow leaves वाले पेड़, पत्थर की path, fallen leaves, soft golden lighting।
-वसंत का जंगल — fresh green trees, pink-white flowers, छोटी curved path, bright cheerful sunlight।
-पुराना रेलवे स्टेशन — छोटा vintage station building, wooden platform, railway tracks, पीछे पहाड़ और पेड़।
-जंगल के बीच railway track — पुरानी railway tracks, दोनों तरफ dense forest, दूर छोटा wooden bridge, cinematic perspective।
-पुरानी हवेली का आंगन — विशाल पुराने घर की दीवारें, stone floor, fountain, plants, balconies और warm light।
-छोटा पहाड़ी बाजार — colorful दुकानों वाली narrow street, wooden signs बिना text के, flower baskets, stone pavement।
-समुद्र के पास पत्थर की सीढ़ियाँ — सीढ़ियाँ नीचे blue ocean की ओर, दोनों तरफ old walls, seagull silhouettes दूर आसमान में।
-जंगल की गुफा का entrance — बड़े पेड़ों के बीच rocky cave entrance, moss, छोटी stream और sunlight।
-पुराना wooden cabin area — जंगल में छोटे लकड़ी के cabins, stone pathway, pine trees, warm morning light।
-पहाड़ी village bridge — colorful houses के बीच छोटा stone bridge, नीचे stream, distant mountains।
-पुरानी ईंटों की गली — लाल brick walls, wooden doors, narrow staircase, ऊपर colorful rooftops, soft evening light।
-घने जंगल की घाटी — नीचे winding river, दोनों तरफ giant trees, rocky cliffs, atmospheric fog।
-बारिश के बाद गाँव — wet cobblestone road, colorful houses, puddle reflections, cloudy sky और fresh green plants।
-छोटा waterfall village — houses के पीछे waterfall, stone bridge, green hills, flowers और wooden fences।
-किसान गाँव — मिट्टी की सड़क, छोटे farmhouses, wooden fences, wheat field, distant hills।
-फूलों की पहाड़ी — पूरी पहाड़ी पर colorful wildflowers, बीच से पत्थर की winding path, दूर cottages।
-पुरानी city staircase — लंबी stone staircase, दोनों तरफ colorful buildings, balconies, hanging plants।
-जंगल का wooden walkway — elevated wooden pathway, दोनों तरफ विशाल tropical plants, sunlight और mist।
-पुराना बंदरगाह — stone street, छोटे colorful houses, wooden boats दूर, blue water और cloudy sky।
-पहाड़ी झील — शांत blue lake, stone pathway, wooden cottages, pine trees और mountains।
-पुराना lighthouse area — समुद्र किनारे stone path, दूर vintage lighthouse, grassy cliffs और dramatic sky।
-जंगल का छोटा village — tree-covered houses, wooden bridges, streams, dense greenery और colorful flowers।
-कच्चे रास्ते वाला गाँव — winding dirt road, brick houses, trees, wooden carts बिना लोगों के, warm sunlight।
-पुरानी castle courtyard — विशाल stone castle walls, courtyard, staircase, vines, banners बिना text के।
-पहाड़ों के बीच छोटी बस्ती — colorful houses, narrow stone roads, giant mountains पीछे, morning mist।
-सर्दियों की पुरानी गली — snow-covered rooftops, stone road, wooden doors, warm glowing windows, snowy trees।
-पतझड़ का गाँव — orange trees, fallen leaves, colorful cottages, curved stone pathway, golden sunlight।
-रात का शांत गाँव — dark blue sky, old colorful houses, glowing warm windows, stone street, soft moonlight।
-चाँदनी वाला जंगल — tall trees, winding path, moonlight through branches, slight mist, magical atmosphere।
-जंगल में पुराना stone bridge — mossy stone bridge, stream नीचे, dense trees, flowers और soft sunlight।
-पहाड़ी मंदिर की सीढ़ियाँ — लंबी ancient stone staircase, दोनों तरफ greenery, mountain background, atmospheric clouds।
-पुराना गाँव का fountain — stone fountain center में, surrounding colorful houses, cobblestone street, flower pots।
-समुद्र किनारे colorful town — pastel buildings, narrow stone road, blue sea, rocky shore और bright sky।
-हरे खेतों के बीच गाँव — green farmland, बीच में winding road, small houses, trees और distant mountains।
-पुराना जंगल रास्ता — giant tree roots, rocky path, moss-covered stones, dense green vegetation।
-पहाड़ी waterfall trail — rocky staircase, side में waterfall, giant plants, wooden railings और mist।
-पुराना wooden village — colorful wooden houses, wooden stairs, balconies, flower boxes, mountain background।
-ईंटों का छोटा पुल — red brick bridge, नीचे stream, दोनों ओर colorful houses और trees।
-जंगल में छोटी नदी — clear stream, stepping stones, dense trees, hanging vines, sunlight reflections।
-पुराना market street — colorful shop fronts, stone pavement, striped awnings बिना text, flower baskets और lanterns।
-पहाड़ी road turn — curved stone road, stone walls, colorful houses, distant valley और clouds।
-गाँव का wooden gate — बड़ा पुराना wooden gate, उसके पीछे cottages, flowers, trees और stone pathway।
-हरे जंगल में cabin — छोटा colorful cabin, chimney, wooden fence, surrounding forest और morning sunlight।
-पुराना canal town — narrow canal, stone bridges, colorful houses, windows और hanging flower pots।
-बारिश में stone bridge — wet stone bridge, red brick walls, puddles, colorful houses, overcast sky।
-पहाड़ी जंगल का रास्ता — rocky staircase, giant trees, mountain mist, flowers और sunlight rays।
-पुराना garden courtyard — stone courtyard, fountain, hedges, colorful old walls, flower beds और soft light।
-छोटा fairy-tale village — tiny colorful cottages, winding stone path, green hills, flowers और whimsical architecture।
-घना tropical jungle — huge broadleaf plants, wooden pathway, small stream, vines, warm humid atmosphere।
-पुराना bamboo bridge — bamboo bridge over a small river, dense bamboo forest, stones और soft sunlight।
-पहाड़ी गाँव में घंटाघर — colorful houses, stone street, old clock tower, distant mountains और clear sky।
-पुराना stone staircase garden — mossy stairs, brick walls, flowers, ivy और ऊपर छोटा cottage।
-जंगल की misty valley — dense trees, winding path disappearing into fog, rocks, ferns और atmospheric depth।
-समुद्र की चट्टानों वाला रास्ता — rocky cliff path, blue ocean, colorful coastal cottages, dramatic clouds।
-गाँव की सुबह — warm sunlight, stone road, small houses, trees, flower pots और हल्की morning mist।
-पुरानी पहाड़ी railway bridge — stone railway bridge, नीचे valley, trees, mountains और vintage atmosphere।
-छोटा forest campsite — wooden cabins, stone firepit बिना fire, trees, pathway और mountains।
-पुरानी नदी घाट — wide stone steps leading to river, brick walls, old houses, trees और calm water।
-फूलों से ढका cottage — छोटा yellow cottage, ivy-covered walls, flower garden, stone pathway और green hills।
-जंगल का ancient pathway — पुराने पत्थरों की uneven road, giant trees, moss, vines और golden light।
-पुराना coastal village — colorful houses, stone staircase, sea visible in distance, flower boxes और blue sky।
-पहाड़ी rain village — cloudy mountains, wet cobblestone street, colorful walls, umbrellas नहीं, plants और mist।
-पुराना brick courtyard — लाल brick walls, wooden staircase, small fountain, flower pots और warm afternoon light।
-जंगल के बीच stone ruins — ancient ruined walls, moss, giant trees, stone pathway, sun rays और mist।
-हरे पहाड़ों के बीच पुल — wooden bridge, नीचे river, rolling green hills, colorful houses दूर।
-पुरानी castle staircase — विशाल stone staircase, red brick walls, ivy, arched doorway और dramatic lighting।
-गाँव की पतली alley — narrow alley, colorful walls, wooden windows, hanging plants, stone floor और sunlight।
-जंगल में hidden village — पेड़ों के बीच छोटे colorful houses, wooden bridges, stream और flowers।
-पहाड़ी sunset village — orange sunset, dark green hills, colorful cottages, stone pathway और glowing sky।
-पुरानी city rooftop view — foreground में stone staircase, पीछे colorful rooftops, church-like tower और mountains।
-शांत lake village — lake किनारे wooden cottages, stone pathway, trees, mountains reflection और morning mist।
-जंगल का पत्थर वाला रास्ता — curved rocky path, giant trunks, ferns, flowers और sunlight rays।
-पुराना village tunnel — brick tunnel entrance, stone stairs, बाहर colorful houses, plants और bright daylight।
-पहाड़ी waterfall bridge — छोटा wooden bridge, नीचे waterfall stream, green cliffs, flowers और mist।
-पुरानी European-style hillside town — stacked colorful houses, curved stone stairs, red roofs, distant mountains और warm sunlight।
-जंगल में ancient wooden house — विशाल पेड़ों के बीच old wooden house, stone path, moss, flowers और soft lighting।
-सुबह की नदी वाली गली — stone staircase river तक जाती हुई, colorful houses, wooden bridge, morning fog और golden sunlight।
-Grand fantasy village background — foreground में winding stone staircase, दोनों तरफ colorful brick houses, पीछे green mountains, waterfall, trees, small bridge और glowing sunrise, rich detailed storybook atmosphere।
+Haan bhai 👍 Ab **har prompt ke aage proper numbering** aur **poora English mein** de raha hoon. Style same rahega, sirf background/location har baar alag hoga.
+
+### 100 English Background Prompts
+
+1. **Old Mountain Village** — A winding stone staircase through an old colorful mountain village, warm yellow and orange houses, red tiled roofs, brick walls, small windows, distant green mountains, soft morning sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+2. **Dense Green Forest** — A narrow dirt pathway passing through a dense green forest, huge trees, thick bushes, large leaves, sunlight rays passing through the branches, peaceful natural atmosphere, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+3. **Old Village Road** — A rustic village road surrounded by old colorful houses, brick walls, wooden doors, small windows, green plants, uneven stone pavement and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+4. **Riverside Village** — A peaceful riverside village with a small stone pathway, colorful houses, a wooden bridge crossing a narrow river, green trees and mountains in the distance, bright natural daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+5. **Rainy Old City** — A narrow old stone street during light rain, colorful buildings on both sides, wet pavement with reflections, brick walls, small windows, cloudy sky and atmospheric lighting, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+6. **Forest Wooden Bridge** — An old wooden bridge crossing a small stream deep inside a green forest, giant trees, hanging vines, rocks, bushes and soft sunlight filtering through the leaves, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+7. **Coastal Village** — A colorful coastal village with narrow stone streets, pastel houses, red roofs, blue ocean visible in the background, small plants and bright blue sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+8. **Ancient Castle Path** — A stone staircase leading toward an ancient castle, massive brick walls, old wooden doors, ivy-covered surfaces, small plants and dramatic sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+9. **Flower Village** — A charming village street filled with colorful flowers, old yellow and orange houses, flower pots under windows, stone pavement, green plants and warm daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+10. **Mountain Valley Path** — A wooden staircase descending through a mountain village, green valley below, colorful houses, distant mountains, wooden fences and soft atmospheric clouds, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+11. **Snowy Mountain Village** — A peaceful snowy mountain village with wooden houses, snow-covered roofs, stone stairs, pine trees, distant mountains and soft winter sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+12. **Desert Town** — A warm desert village with sandy-colored buildings, narrow stone streets, wooden doors, small balconies, clay walls and bright golden sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+13. **Forest Temple** — Ancient stone stairs leading toward an old forest temple, moss-covered walls, giant trees, hanging vines, rocks and dramatic sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+14. **Mountain Waterfall** — A beautiful mountain waterfall surrounded by rocks, green trees, flowers, a small wooden pathway and mist floating through the air, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+15. **Old European Village Street** — A charming curved stone street surrounded by colorful old houses, red tiled roofs, wooden windows, brick walls and warm afternoon sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+16. **Village Square** — A peaceful old village square with a stone fountain in the center, colorful houses surrounding the square, flower pots, small trees, stone pavement and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+17. **Old Wooden Settlement** — A narrow wooden staircase between colorful wooden houses, rustic balconies, small windows, hanging plants, distant green mountains and soft daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+18. **Green Hillside Village** — Small colorful cottages scattered across a lush green hillside, a winding stone pathway connecting them, distant mountains, flowers and soft sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+19. **Bamboo Forest** — A narrow pathway surrounded by tall bamboo trees, dense green vegetation, soft sunlight, small rocks and peaceful natural atmosphere, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+20. **River Stairway** — Old stone stairs descending toward a peaceful river, red brick walls on both sides, colorful houses above, trees and soft afternoon sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+21. **Sunrise Village** — A colorful old village at sunrise, winding stone road, orange and yellow houses, distant mountains, pink-orange sky and warm golden light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+22. **Sunset Alley** — A narrow colorful village alley during sunset, old brick walls, wooden windows, stone pavement, orange sky, long shadows and warm glowing light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+23. **Autumn Forest Path** — A winding forest path covered with orange and yellow fallen leaves, tall trees, rocks, bushes and beautiful golden autumn sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+24. **Spring Forest** — A bright green forest filled with pink and white flowers, a curved pathway, fresh leaves, small rocks and cheerful spring sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+25. **Old Railway Station** — A small vintage railway station surrounded by colorful buildings, wooden platform, old railway tracks, trees and distant mountains, peaceful daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+26. **Forest Railway Track** — Old railway tracks passing through a dense forest, giant trees on both sides, a small wooden bridge in the distance, green bushes and atmospheric sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+27. **Old Mansion Courtyard** — A beautiful old mansion courtyard with brick walls, stone floor, decorative fountain, green plants, balconies and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+28. **Mountain Market Street** — A colorful mountain market street with small wooden shops, stone pavement, flower baskets, old buildings, mountain scenery and bright daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+29. **Ocean Staircase** — Old stone stairs descending toward a blue ocean, red brick walls on both sides, colorful coastal houses, rocky shore and bright sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+30. **Forest Cave Entrance** — A mysterious rocky cave entrance hidden among giant trees, moss-covered rocks, small stream, vines and dramatic sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+31. **Forest Cabins** — Small colorful wooden cabins hidden inside a green forest, stone pathway, wooden fences, tall pine trees, flowers and warm morning light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+32. **Mountain Village Bridge** — A small stone bridge connecting colorful mountain houses, a clear stream underneath, green hills, flowers and distant mountains, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+33. **Red Brick Alley** — A narrow old alley surrounded by red brick walls, wooden doors, stone stairs, colorful rooftops and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+34. **Deep Forest Valley** — A deep green valley with a winding river, huge trees, rocky cliffs, small plants and soft mist between the mountains, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+35. **Village After Rain** — A colorful village after rainfall, wet cobblestone street, puddle reflections, old brick houses, green plants and cloudy sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+36. **Waterfall Village** — A charming village with a waterfall behind colorful houses, small stone bridge, green hills, flowers, wooden fences and bright daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+37. **Farm Village** — A peaceful rural village with dirt roads, small farmhouses, wooden fences, green fields, trees, haystacks and distant hills, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+38. **Flower Mountain** — A lush mountain covered with colorful wildflowers, a winding stone pathway, small cottages, green hills and bright blue sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+39. **Grand City Staircase** — A long stone staircase surrounded by colorful old buildings, balconies, hanging plants, brick walls and dramatic perspective, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, 16:9.
+
+40. **Jungle Wooden Walkway** — An elevated wooden walkway passing through a dense tropical jungle, huge leaves, vines, trees, soft mist and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+41. **Old Harbor** — An old coastal harbor with colorful houses, stone streets, wooden boats in the distance, blue water, rocky edges and cloudy sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+42. **Mountain Lake Village** — A peaceful blue mountain lake surrounded by wooden cottages, stone pathways, pine trees, green hills and distant mountains, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+43. **Lighthouse Coast** — A rocky coastal pathway leading toward an old lighthouse, green cliffs, blue ocean, colorful houses and dramatic clouds, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+44. **Hidden Forest Village** — Colorful houses hidden among giant trees, small wooden bridges crossing streams, flowers, vines and dense green vegetation, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+45. **Rustic Country Road** — A winding dirt road through a peaceful countryside village, brick houses, wooden fences, green trees, farmland and warm golden sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+46. **Castle Courtyard** — A large ancient castle courtyard with massive stone walls, old staircase, ivy, wooden doors, stone floor and dramatic afternoon light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+47. **Mountain Settlement** — A small colorful settlement between giant green mountains, narrow stone roads, old houses, wooden fences and light morning mist, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+48. **Winter Old Street** — A charming old village street covered with snow, colorful houses, snowy rooftops, wooden doors, pine trees and warm glowing windows, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+49. **Autumn Village** — An old colorful village surrounded by orange trees, fallen leaves, stone pathways, small cottages and warm golden sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+50. **Night Village** — A peaceful old village at night, dark blue sky, colorful houses with warm glowing windows, stone streets, trees and soft moonlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+51. **Moonlit Forest** — A mysterious forest pathway under a bright moon, tall trees, soft mist, rocks, bushes and moonlight shining through the branches, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+52. **Mossy Stone Bridge** — An ancient moss-covered stone bridge over a small stream, dense forest, flowers, vines, rocks and soft sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+53. **Mountain Temple Stairway** — A long ancient stone staircase leading toward a mountain temple, green trees on both sides, distant mountains, clouds and atmospheric sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+54. **Village Fountain Street** — A charming village street with an old stone fountain, colorful houses, cobblestone pavement, flower pots, small trees and warm daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+55. **Colorful Seaside Town** — Pastel-colored seaside buildings, narrow stone road, blue ocean, rocky shoreline, flower boxes and bright summer sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+56. **Green Farmland Village** — A winding country road through lush green farmland, colorful cottages, large trees, wooden fences and distant mountains under a bright sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+57. **Ancient Forest Road** — A mysterious rocky pathway surrounded by giant trees, exposed roots, moss-covered stones, hanging vines and beautiful sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+58. **Waterfall Trail** — A rocky staircase beside a beautiful waterfall, giant tropical plants, wooden railings, mist, green cliffs and bright natural light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+59. **Wooden Mountain Village** — Colorful wooden houses connected by wooden stairs, balconies, flower boxes, green hills and distant mountains, warm daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+60. **Brick Bridge Village** — An old red brick bridge over a narrow stream, colorful houses on both sides, trees, flowers and warm afternoon sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+61. **Forest Stream** — A crystal-clear stream flowing through a dense forest, stepping stones, giant trees, hanging vines, green ferns and sunlight reflections, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+62. **Old Market Street** — A colorful old market street with small shop fronts, stone pavement, wooden awnings, flower baskets, lanterns and detailed brick buildings, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+63. **Mountain Road Turn** — A curved stone road along a mountain village, old stone walls, colorful houses, green valley below, distant mountains and soft clouds, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+64. **Old Village Gate** — A large rustic wooden gate opening into a colorful village, stone pathway, flowers, trees, brick walls and distant mountains, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+65. **Forest Cabin** — A cozy colorful cabin hidden among tall trees, wooden fence, stone pathway, flowers, chimney and warm morning sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+66. **Canal Village** — A narrow canal running between colorful old houses, small stone bridges, wooden windows, hanging flower pots and warm daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+67. **Rainy Stone Bridge** — An old stone bridge during rainfall, wet pavement, red brick walls, colorful houses, puddles and cloudy atmospheric sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+68. **Mountain Forest Trail** — A rocky staircase winding through a mountain forest, giant trees, misty mountains, flowers, moss and bright sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+69. **Old Garden Courtyard** — A peaceful stone courtyard with an old fountain, green hedges, colorful brick walls, flowers, ivy-covered surfaces and soft afternoon light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+70. **Fairy Tale Village** — Tiny colorful cottages along a winding stone pathway, green hills, flowers, curved rooftops, charming old architecture and magical warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+71. **Tropical Jungle Path** — A dense tropical jungle with huge green leaves, wooden pathway, small stream, vines, giant trees, soft mist and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+72. **Bamboo Bridge** — A rustic bamboo bridge crossing a narrow river inside a dense bamboo forest, rocks, green plants and soft sunlight filtering through the bamboo, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+73. **Mountain Clock Tower Village** — A colorful mountain village with an old clock tower, narrow stone streets, small houses, distant mountains, trees and bright blue sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, 16:9.
+
+74. **Stone Staircase Garden** — Moss-covered stone stairs surrounded by brick walls, ivy, colorful flowers, green plants and a small cottage at the top, soft sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+75. **Misty Forest Valley** — A deep forest valley with a winding pathway disappearing into soft fog, giant trees, ferns, rocks and atmospheric sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+76. **Ocean Cliff Path** — A rocky pathway along a high ocean cliff, blue sea, colorful coastal cottages, green grass and dramatic cloudy sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+77. **Peaceful Village Morning** — A quiet colorful village in the early morning, stone road, small houses, trees, flower pots, distant hills and gentle morning mist, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+78. **Mountain Railway Bridge** — An old railway bridge crossing a green mountain valley, stone supports, railway tracks, dense trees, distant mountains and vintage atmosphere, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+79. **Forest Cabin Area** — Several small wooden cabins surrounded by a dense forest, stone pathways, wooden fences, mountains in the distance and warm natural sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+80. **Old River Steps** — Wide ancient stone steps descending toward a calm river, old brick walls, colorful houses, trees and soft golden sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+81. **Flower Covered Cottage** — A charming yellow cottage covered with green ivy and colorful flowers, stone pathway, flower garden, green hills and soft sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+82. **Ancient Jungle Pathway** — An old uneven stone pathway surrounded by giant tropical trees, moss, vines, ferns and warm golden sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+83. **Coastal Stairway Village** — A colorful coastal village with a stone staircase leading toward the sea, old houses, flower boxes, blue ocean and bright sky, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+84. **Rainy Mountain Village** — A colorful mountain village during a cloudy rainy day, wet cobblestone street, brick walls, green plants, misty mountains and soft diffused lighting, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, 16:9.
+
+85. **Old Brick Courtyard** — A cozy courtyard surrounded by old red brick walls, wooden staircase, small stone fountain, colorful flowers and warm afternoon sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+86. **Forest Ruins** — Ancient ruined stone walls hidden deep inside a green forest, moss, giant trees, broken stone pathway, vines and dramatic sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+87. **Green Mountain Bridge** — A rustic wooden bridge crossing a river between lush green hills, colorful houses in the distance, trees, rocks and bright daylight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+88. **Castle Staircase** — A huge ancient castle staircase surrounded by stone and red brick walls, ivy, arched doorway, old wooden details and dramatic cinematic lighting, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, 16:9.
+
+89. **Colorful Village Alley** — A very narrow colorful village alley with old walls, wooden windows, hanging plants, stone floor, curved architecture and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+90. **Hidden Forest Settlement** — A secret village hidden deep inside a forest, tiny colorful houses, wooden bridges, clear stream, flowers, vines and giant trees, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+91. **Mountain Sunset Village** — A colorful mountain village during sunset, orange sky, green hills, small cottages, winding stone pathway and glowing warm light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+92. **Old City Rooftop View** — A high viewpoint overlooking colorful old rooftops, foreground stone staircase, distant tower, green mountains and warm evening sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+93. **Lake Village Morning** — A peaceful lakeside village with wooden cottages, stone pathway, calm blue lake, mountain reflections, pine trees and soft morning mist, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+94. **Deep Forest Stone Path** — A curved rocky path through a deep green forest, giant tree trunks, ferns, flowers, moss-covered rocks and beautiful sunlight rays, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+95. **Old Village Tunnel** — An ancient red brick tunnel entrance with stone stairs, colorful houses visible outside, green plants, vines and bright daylight beyond the tunnel, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+96. **Waterfall Bridge** — A small wooden bridge crossing a waterfall stream, green cliffs, colorful flowers, mist, giant trees and bright natural sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+97. **Hillside European Town** — A beautiful hillside town with stacked colorful houses, curved stone stairs, red tiled roofs, green mountains, small balconies and warm sunlight, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+98. **Ancient Forest House** — An old colorful wooden house hidden among enormous trees, stone pathway, moss, flowers, wooden fence, vines and soft natural lighting, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+99. **Morning River Alley** — A stone staircase leading toward a calm river, colorful old houses, wooden bridge, morning fog, green trees and beautiful golden sunrise light, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, detailed shading, cinematic perspective, 16:9.
+
+100. **Grand Fantasy Village** — A winding stone staircase in the foreground, colorful brick houses on both sides, green mountains in the background, a beautiful waterfall, trees, a small wooden bridge, flowers and glowing sunrise, rich detailed storybook atmosphere, no people, no characters, no text, 2D cartoon illustration, hand-painted animated background, clean bold outlines, soft detailed shading, vibrant warm colors, cinematic perspective, 16:9.
